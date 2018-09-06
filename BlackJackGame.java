@@ -28,7 +28,15 @@ class Card{
     void print(){
         System.out.println(myValue + " of "+suit + " : "+ getValue() + " points");
     }
-
+    int getValue(){
+        if(myValue == "Queen"||myValue == "King"||myValue == "Jack"){
+            return 10;
+        }
+        if(myValue == "Ace"){
+            return 11;
+        }
+        return new Integer(myValue);
+    }
 
 }
 
